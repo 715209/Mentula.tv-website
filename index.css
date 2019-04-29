@@ -1,3 +1,74 @@
+body {
+    margin: 0;
+}
 
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "Head"
+        "Movies"
+        "Twitch"
+        "Reddit"
+        "Blog"
+        "Videos"
+        "Broadcast"
+        "Footer";
+}
 
+@media (min-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "Head Head"
+            "Movies Twitch"
+            "Reddit Blog"
+            "Videos Broadcast"
+            "Footer Footer";
+        text-align: center;
+        font-size: 8em;
+    }
+}
 
+.Head {
+    grid-area: Head;
+    background-color: green;
+}
+
+.Movies {
+    grid-area: Movies;
+    background-color: red;
+}
+
+.Twitch {
+    grid-area: Twitch;
+    background-color: bisque;
+}
+
+.Reddit {
+    grid-area: Reddit;
+    background-color: indigo;
+}
+
+.Blog {
+    grid-area: Blog;
+    background-color: greenyellow;
+}
+
+.Videos {
+    grid-area: Videos;
+    background-color: whitesmoke;
+}
+
+.Broadcast {
+    grid-area: Broadcast;
+    background-color: peru;
+}
+
+.Footer {
+    grid-area: Footer;
+    background-color: lightpink;
+}
